@@ -1,0 +1,26 @@
+//CREATE CLASS
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace InventorySystem.Models
+{
+    public static class MyGlobalVariables
+    {
+        public static string Status { get; set; }
+        public static string EmpID { get; set; }
+        public static string Ename { get; set; }
+        public static string UName { get; set; }
+
+    }
+}
+
+// CONTROLLER
+//import the location of your class
+using InventorySystem.Models;
+
+//consuming global variable
+MyGlobalVariables.EmpID = Convert.ToString(row["EmpID"]);
+MyGlobalVariables.UName = Convert.ToString(row["EmpName"]);
